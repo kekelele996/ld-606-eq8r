@@ -53,6 +53,32 @@ CREATE TABLE IF NOT EXISTS work_task (
   finished_at TEXT
 );
 
+CREATE TABLE IF NOT EXISTS berth_blockade (
+  id INTEGER PRIMARY KEY,
+  berth_id TEXT,
+  block_start TEXT,
+  block_end TEXT,
+  reason TEXT,
+  status TEXT,
+  dispatcher_id TEXT,
+  created_at TEXT,
+  lifted_at TEXT
+);
+
+CREATE TABLE IF NOT EXISTS berth_reassignment (
+  id INTEGER PRIMARY KEY,
+  blockade_id TEXT,
+  berth_plan_id TEXT,
+  vessel_id TEXT,
+  vessel_name TEXT,
+  from_berth_id TEXT,
+  to_berth_id TEXT,
+  prev_status TEXT,
+  action TEXT,
+  created_at TEXT,
+  restored_at TEXT
+);
+
 CREATE TABLE IF NOT EXISTS audit_log (
   id INTEGER PRIMARY KEY,
   actor TEXT,

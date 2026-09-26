@@ -1,0 +1,1 @@
+export const createBerthBlockadeDto = (overrides = {}) => ({ id: 0, berth_id: 1, block_start: "", block_end: "", reason: "", status: "ACTIVE", dispatcher_id: 1, created_at: "", lifted_at: null, ...overrides });
