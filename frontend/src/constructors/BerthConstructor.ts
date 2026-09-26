@@ -1,13 +1,13 @@
 import type { Berth } from "../types/Berth";
 
 export const createDefaultBerth = (overrides: Partial<Berth> = {}): Berth => ({
-  id: 1 as never,
-  berth_code: "berth code 1" as never,
-  length_m: "length m 1" as never,
-  water_depth_m: "water depth m 1" as never,
-  berth_type: "CONFLICT" as never,
-  current_status: "CONFLICT" as never,
-  safety_note: "safety note 1" as never,
+  id: 1,
+  berth_code: "B01",
+  length_m: 260,
+  water_depth_m: 14.5,
+  berth_type: "集装箱",
+  current_status: "FREE",
+  safety_note: "深水泊位，可接大型集装箱船",
   ...overrides
 });
 

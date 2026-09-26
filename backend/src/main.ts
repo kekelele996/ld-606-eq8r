@@ -10,6 +10,7 @@ import berthRoutes from "./routes/BerthRoutes";
 import berthPlanRoutes from "./routes/BerthPlanRoutes";
 import yardSlotRoutes from "./routes/YardSlotRoutes";
 import workTaskRoutes from "./routes/WorkTaskRoutes";
+import berthBlockadeRoutes from "./routes/BerthBlockadeRoutes";
 
 const app = express();
 app.use(cors());
@@ -23,5 +24,6 @@ app.use("/api/berth", berthRoutes);
 app.use("/api/berth-plan", berthPlanRoutes);
 app.use("/api/yard-slot", yardSlotRoutes);
 app.use("/api/work-task", workTaskRoutes);
+app.use("/api/berth-blockade", berthBlockadeRoutes);
 app.use(errorHandlerMiddleware);
 app.listen(config.port, () => console.log("port-yard backend listening on", config.port));

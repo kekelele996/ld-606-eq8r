@@ -2,65 +2,96 @@ export const mockData = {
   "vessel": [
     {
       "id": 1,
-      "vessel_name": "vessel name 1",
-      "imo_no": "imo no 1",
-      "carrier": "carrier 1",
-      "length_m": "length m 1",
-      "draft_m": "draft m 1",
-      "eta": "eta 1",
-      "etd": "etd 1",
-      "status": "CONFLICT"
-    },
-    {
-      "id": 2,
-      "vessel_name": "vessel name 2",
-      "imo_no": "imo no 2",
-      "carrier": "carrier 2",
-      "length_m": "length m 2",
-      "draft_m": "draft m 2",
-      "eta": "eta 2",
-      "etd": "etd 2",
+      "vessel_name": "海云轮",
+      "imo_no": "IMO9081234",
+      "carrier": "远洋航运",
+      "length_m": 220,
+      "draft_m": 12.5,
+      "eta": "2026-09-27T08:00:00+08:00",
+      "etd": "2026-09-29T18:00:00+08:00",
       "status": "APPROVED"
     },
     {
+      "id": 2,
+      "vessel_name": "江河轮",
+      "imo_no": "IMO9082345",
+      "carrier": "江海联运",
+      "length_m": 180,
+      "draft_m": 10.5,
+      "eta": "2026-09-26T06:00:00+08:00",
+      "etd": "2026-09-28T12:00:00+08:00",
+      "status": "BERTHING"
+    },
+    {
       "id": 3,
-      "vessel_name": "vessel name 3",
-      "imo_no": "imo no 3",
-      "carrier": "carrier 3",
-      "length_m": "length m 3",
-      "draft_m": "draft m 3",
-      "eta": "eta 3",
-      "etd": "etd 3",
+      "vessel_name": "小渤轮",
+      "imo_no": "IMO9083456",
+      "carrier": "渤海快航",
+      "length_m": 120,
+      "draft_m": 8,
+      "eta": "2026-09-28T09:00:00+08:00",
+      "etd": "2026-09-30T10:00:00+08:00",
+      "status": "APPROVED"
+    },
+    {
+      "id": 4,
+      "vessel_name": "丰顺轮",
+      "imo_no": "IMO9084567",
+      "carrier": "顺达船务",
+      "length_m": 150,
+      "draft_m": 9,
+      "eta": "2026-09-30T08:00:00+08:00",
+      "etd": "2026-10-02T09:00:00+08:00",
+      "status": "APPROVED"
+    },
+    {
+      "id": 5,
+      "vessel_name": "远航轮",
+      "imo_no": "IMO9085678",
+      "carrier": "远洋航运",
+      "length_m": 240,
+      "draft_m": 13.5,
+      "eta": "2026-09-29T07:00:00+08:00",
+      "etd": "2026-10-01T16:00:00+08:00",
       "status": "DRAFT"
     }
   ],
   "berth": [
     {
       "id": 1,
-      "berth_code": "berth code 1",
-      "length_m": "length m 1",
-      "water_depth_m": "water depth m 1",
-      "berth_type": "CONFLICT",
-      "current_status": "CONFLICT",
-      "safety_note": "safety note 1"
+      "berth_code": "B01",
+      "length_m": 260,
+      "water_depth_m": 14.5,
+      "berth_type": "集装箱",
+      "current_status": "FREE",
+      "safety_note": "深水泊位，可接大型集装箱船"
     },
     {
       "id": 2,
-      "berth_code": "berth code 2",
-      "length_m": "length m 2",
-      "water_depth_m": "water depth m 2",
-      "berth_type": "APPROVED",
-      "current_status": "APPROVED",
-      "safety_note": "safety note 2"
+      "berth_code": "B02",
+      "length_m": 200,
+      "water_depth_m": 12,
+      "berth_type": "散货",
+      "current_status": "OCCUPIED",
+      "safety_note": "注意潮汐窗口"
     },
     {
       "id": 3,
-      "berth_code": "berth code 3",
-      "length_m": "length m 3",
-      "water_depth_m": "water depth m 3",
-      "berth_type": "BERTHING",
-      "current_status": "DRAFT",
-      "safety_note": "safety note 3"
+      "berth_code": "B03",
+      "length_m": 150,
+      "water_depth_m": 10,
+      "berth_type": "件杂货",
+      "current_status": "FREE",
+      "safety_note": "小型船舶专用"
+    },
+    {
+      "id": 4,
+      "berth_code": "B04",
+      "length_m": 180,
+      "water_depth_m": 11,
+      "berth_type": "集装箱",
+      "current_status": "FREE",
+      "safety_note": "备用集装箱泊位"
     }
   ],
   "berthPlan": [
@@ -68,33 +99,65 @@ export const mockData = {
       "id": 1,
       "vessel_id": 1,
       "berth_id": 1,
-      "planned_arrival": "planned arrival 1",
-      "planned_departure": "planned departure 1",
-      "priority": "priority 1",
-      "status": "CONFLICT",
+      "planned_arrival": "2026-09-27T08:00:00+08:00",
+      "planned_departure": "2026-09-29T18:00:00+08:00",
+      "priority": "HIGH",
+      "status": "APPROVED",
       "dispatcher_id": 1
     },
     {
       "id": 2,
       "vessel_id": 2,
       "berth_id": 2,
-      "planned_arrival": "planned arrival 2",
-      "planned_departure": "planned departure 2",
-      "priority": "priority 2",
-      "status": "APPROVED",
-      "dispatcher_id": 2
+      "planned_arrival": "2026-09-26T06:00:00+08:00",
+      "planned_departure": "2026-09-28T12:00:00+08:00",
+      "priority": "MEDIUM",
+      "status": "BERTHING",
+      "dispatcher_id": 1
     },
     {
       "id": 3,
       "vessel_id": 3,
       "berth_id": 3,
-      "planned_arrival": "planned arrival 3",
-      "planned_departure": "planned departure 3",
-      "priority": "priority 3",
+      "planned_arrival": "2026-09-28T09:00:00+08:00",
+      "planned_departure": "2026-09-30T10:00:00+08:00",
+      "priority": "LOW",
+      "status": "APPROVED",
+      "dispatcher_id": 2
+    },
+    {
+      "id": 4,
+      "vessel_id": 4,
+      "berth_id": 1,
+      "planned_arrival": "2026-09-30T08:00:00+08:00",
+      "planned_departure": "2026-10-02T09:00:00+08:00",
+      "priority": "MEDIUM",
+      "status": "APPROVED",
+      "dispatcher_id": 2
+    },
+    {
+      "id": 5,
+      "vessel_id": 5,
+      "berth_id": 2,
+      "planned_arrival": "2026-09-29T07:00:00+08:00",
+      "planned_departure": "2026-10-01T16:00:00+08:00",
+      "priority": "HIGH",
       "status": "DRAFT",
-      "dispatcher_id": 3
+      "dispatcher_id": 1
+    },
+    {
+      "id": 6,
+      "vessel_id": 2,
+      "berth_id": 1,
+      "planned_arrival": "2026-09-20T08:00:00+08:00",
+      "planned_departure": "2026-09-22T09:00:00+08:00",
+      "priority": "LOW",
+      "status": "DEPARTED",
+      "dispatcher_id": 1
     }
   ],
+  "berthBlockade": [] as unknown[],
+  "berthPlanAdjustment": [] as unknown[],
   "yardSlot": [
     {
       "id": 1,

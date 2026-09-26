@@ -1,1 +1,1 @@
-export const ERROR_MESSAGES = { AUTH_REQUIRED: "missing bearer token", RBAC_DENIED: "role denied", VALIDATION_FAILED: "invalid payload", RATE_LIMITED: "too many requests" };
+export const ERROR_MESSAGES = { AUTH_REQUIRED: "missing bearer token", RBAC_DENIED: "role denied", VALIDATION_FAILED: "invalid payload", RATE_LIMITED: "too many requests", BERTH_NOT_FOUND: "berth not found", BLOCKADE_NOT_FOUND: "blockade not found", BLOCKADE_ALREADY_LIFTED: "blockade already lifted", BLOCKADE_WINDOW_INVALID: "block start must be before block end" };
